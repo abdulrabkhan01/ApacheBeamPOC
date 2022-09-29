@@ -37,3 +37,5 @@ Typical Beam Driver program work as follows:
 <ul>2- Create: a PCollection Object for pipeline data (Either through IO/Memory)</ul>
 <ul>3- Apply: PTransform to each PCollection, Transforms can chang, filer, group, analyze or process the PCollection without 
 modifying then input collection.</ul>
+<ul>4- Write: Final output to an external source</ul>
+<ul>5- Run: The pipeline using designated runner</ul>
