@@ -7,7 +7,7 @@ public class DataSet {
     private static final List<Integer> data = new ArrayList<Integer>();
 
     static {
-        for (int i = 0; i < 99; i++)
+        for (int i = 0; i < 20; i++)
             data.add(i);
     }
 

@@ -19,7 +19,7 @@ public class BasicFilteringExample {
                         return input;
                     }
                 }))
-                .apply(ParDo.of(new FilterData(10)))
+                .apply(ParDo.of(new FilterData(5)))
                 .apply(MapElements.via(new SimpleFunction<Integer, Integer>() {
                     public Integer apply(Integer input) {
                         System.out.println("Post Filtered " + input);
@@ -30,7 +30,7 @@ public class BasicFilteringExample {
     }
 
     private static class FilterData extends DoFn<Integer, Integer> {
-        private int maxLimit = 50;
+        private int maxLimit = 10;
 
         public FilterData(int maxLimit) {
             this.maxLimit = maxLimit;
