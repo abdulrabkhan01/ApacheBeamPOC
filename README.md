@@ -17,6 +17,8 @@ Supported back ends for running apache beam pipelines
    <ul> Google Cloud Dataflow</ul>
     <ul> Apache Samza </ul>
      <ul> Hazlecast Jet </ul>
+     <ul> Direct Runner</ul>
+     <ul> Apache Nemo</ul>
 
 
 Pipeline:
@@ -28,3 +30,10 @@ PCollection:
 -------------
 Defines the distributed data set that Apache Beam Pipeline operates on. The data set can be bounded (i.e. coming from fixed source like file)
 or unbounded(i.e. coming from like continously updating source, like subscriptions etc.)
+
+Typical Beam Driver program work as follows:
+----------------------------------------------
+1- Create: a pipeline object and set execution options
+2- Create: a PCollection Object for pipeline data (Either through IO/Memory)
+3- Apply: PTransform to each PCollection, Transforms can chang, filer, group, analyze or process the PCollection without 
+modifying then input collection.
