@@ -33,7 +33,7 @@ or unbounded(i.e. coming from like continously updating source, like subscriptio
 
 Typical Beam Driver program work as follows:
 ----------------------------------------------
-1- Create: a pipeline object and set execution options
-2- Create: a PCollection Object for pipeline data (Either through IO/Memory)
-3- Apply: PTransform to each PCollection, Transforms can chang, filer, group, analyze or process the PCollection without 
+<ul>1- Create: a pipeline object and set execution options
+<ul>2- Create: a PCollection Object for pipeline data (Either through IO/Memory)
+<ul>3- Apply: PTransform to each PCollection, Transforms can chang, filer, group, analyze or process the PCollection without 
 modifying then input collection.
